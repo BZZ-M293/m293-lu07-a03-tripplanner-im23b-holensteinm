@@ -3,12 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <title>Reisebuchungs-Formular</title>
-
 </head>
 <body>
 
 <h1>Reisebuchungs-Formular</h1>
 
+<form>
+  <h2>Abflughafen</h2>
+  <select name="departure_airport">
+    <optgroup label="Deutschland">
+      <option value="MUC">München (MUC)</option>
+      <option value="FRA">Frankfurt (FRA)</option>
+      <option value="BER">Berlin (BER)</option>
+    </optgroup>
+    <optgroup label="Österreich">
+      <option value="VIE">Wien (VIE)</option>
+    </optgroup>
+    <optgroup label="Italien">
+      <option value="MXP">Mailand (MXP)</option>
+    </optgroup>
+    <optgroup label="Frankreich">
+      <option value="CDG">Paris (CDG)</option>
+    </optgroup>
+  </select>
+
+  <h2>Unterkunft</h2>
+  <input type="radio" name="accommodation" value="hotel"> Hotel
+  <input type="radio" name="accommodation" value="apartment"> Ferienwohnung
+  <input type="radio" name="accommodation" value="hostel"> Hostel
+
+  <h2>Zusätzliche Dienstleistungen</h2>
+  <input type="checkbox" name="services" value="travel_insurance"> Reiseversicherung
+  <input type="checkbox" name="services" value="airport_transfer"> Flughafentransfer
+  <input type="checkbox" name="services" value="extra_baggage"> Zusätzliches Gepäck
+
+  <h2>Reisezeitraum</h2>
+  <input type="date" name="start_date" placeholder="Anfangsdatum">
+  <input type="date" name="end_date" placeholder="Enddatum">
+  <input type="number" name="duration" placeholder="Dauer in Tagen (1-21)" min=1 max=21>
+
+  <h2>Anzahl der Reisenden</h2>
+  <input type="number" name="number_of_travelers" placeholder="# Reisender">
+
+  <h2>Fluggesellschaft</h2>
+  <select name="airline">
+    <!-- Add options here -->
+  </select>
+
+  <h2>Weitere optionale Dienstleistungen</h2>
+  <input type="checkbox" name="services" value="priority_check_in"> Priority-Check-In
+  <input type="checkbox" name="services" value="extra_hand_luggage"> Zusätzliches Handgepäck
+  <input type="checkbox" name="services" value="car_rental"> Mietwagenbuchung
+
+  <h2>Zielort</h2>
+  <datalist id="destinations">
+    <!-- Add options here -->
+  </datalist>
+  <input type="text" name="destination" list="destinations">
+
+  <h2>Kontaktinformationen</h2>
+  <input type="email" name="email" placeholder"E-Mail-Adresse">
+
+  <button type="reset">Reset</button>
+  <button type="submit">Absenden</button>
+
+</form>
 
 </body>
 </html>

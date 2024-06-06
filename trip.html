@@ -10,59 +10,93 @@
 
 <form>
   <h2>Abflughafen</h2>
-  <select name="departure_airport">
-    <optgroup label="Deutschland">
-      <option value="MUC">München (MUC)</option>
-      <option value="FRA">Frankfurt (FRA)</option>
-      <option value="BER">Berlin (BER)</option>
-    </optgroup>
-    <optgroup label="Österreich">
-      <option value="VIE">Wien (VIE)</option>
-    </optgroup>
-    <optgroup label="Italien">
-      <option value="MXP">Mailand (MXP)</option>
-    </optgroup>
-    <optgroup label="Frankreich">
-      <option value="CDG">Paris (CDG)</option>
-    </optgroup>
-  </select>
+  <label>
+    <select name="departure_airport">
+      <optgroup label="Deutschland">
+        <option value="MUC">München (MUC)</option>
+        <option value="FRA">Frankfurt (FRA)</option>
+        <option value="BER">Berlin (BER)</option>
+      </optgroup>
+      <optgroup label="Österreich">
+        <option value="VIE">Wien (VIE)</option>
+      </optgroup>
+      <optgroup label="Italien">
+        <option value="MXP">Mailand (MXP)</option>
+      </optgroup>
+      <optgroup label="Frankreich">
+        <option value="CDG">Paris (CDG)</option>
+      </optgroup>
+    </select>
+  </label>
 
   <h2>Unterkunft</h2>
-  <input type="radio" name="accommodation" value="hotel"> Hotel
-  <input type="radio" name="accommodation" value="apartment"> Ferienwohnung
-  <input type="radio" name="accommodation" value="hostel"> Hostel
+  <label>
+    <input type="radio" name="accommodation" value="hotel">
+  </label> Hotel
+  <label>
+    <input type="radio" name="accommodation" value="apartment">
+  </label> Ferienwohnung
+  <label>
+    <input type="radio" name="accommodation" value="hostel">
+  </label> Hostel
 
   <h2>Zusätzliche Dienstleistungen</h2>
-  <input type="checkbox" name="services" value="travel_insurance"> Reiseversicherung
-  <input type="checkbox" name="services" value="airport_transfer"> Flughafentransfer
-  <input type="checkbox" name="services" value="extra_baggage"> Zusätzliches Gepäck
+  <label>
+    <input type="checkbox" name="services" value="travel_insurance">
+  </label> Reiseversicherung
+  <label>
+    <input type="checkbox" name="services" value="airport_transfer">
+  </label> Flughafentransfer
+  <label>
+    <input type="checkbox" name="services" value="extra_baggage">
+  </label> Zusätzliches Gepäck
 
   <h2>Reisezeitraum</h2>
-  <input type="date" name="start_date" placeholder="Anfangsdatum">
-  <input type="date" name="end_date" placeholder="Enddatum">
-  <input type="number" name="duration" placeholder="Dauer in Tagen (1-21)" min=1 max=21>
+  <label>
+    <input type="date" name="start_date" placeholder="Anfangsdatum">
+  </label>
+  <label>
+    <input type="date" name="end_date" placeholder="Enddatum">
+  </label>
+  <label>
+    <input type="number" name="duration" placeholder="Dauer in Tagen (1-21)" min=1 max=21>
+  </label>
 
   <h2>Anzahl der Reisenden</h2>
-  <input type="number" name="number_of_travelers" placeholder="# Reisender">
+  <label>
+    <input type="number" name="number_of_travelers" placeholder="# Reisender">
+  </label>
 
   <h2>Fluggesellschaft</h2>
-  <select name="airline">
-    <!-- Add options here -->
-  </select>
+  <label>
+    <select name="airline">
+      <!-- Add options here -->
+    </select>
+  </label>
 
   <h2>Weitere optionale Dienstleistungen</h2>
-  <input type="checkbox" name="services" value="priority_check_in"> Priority-Check-In
-  <input type="checkbox" name="services" value="extra_hand_luggage"> Zusätzliches Handgepäck
-  <input type="checkbox" name="services" value="car_rental"> Mietwagenbuchung
+  <label>
+    <input type="checkbox" name="services" value="priority_check_in">
+  </label> Priority-Check-In
+  <label>
+    <input type="checkbox" name="services" value="extra_hand_luggage">
+  </label> Zusätzliches Handgepäck
+  <label>
+    <input type="checkbox" name="services" value="car_rental">
+  </label> Mietwagenbuchung
 
   <h2>Zielort</h2>
   <datalist id="destinations">
     <!-- Add options here -->
   </datalist>
-  <input type="text" name="destination" list="destinations">
+  <label>
+    <input type="text" name="destination" list="destinations">
+  </label>
 
   <h2>Kontaktinformationen</h2>
-  <input type="email" name="email" placeholder"E-Mail-Adresse">
+  <label>
+    <input type="email" name="email" placeholder>
+  </label>"E-Mail-Adresse">
 
   <button type="reset">Reset</button>
   <button type="submit">Absenden</button>
